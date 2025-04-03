@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_shadow_start_color"
+    android:background="#33C458"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,58 +13,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150sp"
-        android:text="LOGIN"
+        android:layout_marginTop="150dp"
+        android:text="SELAMAT DATANG"
         android:textStyle="bold"
         android:textSize="34sp"
-        android:textColor="@color/cardview_dark_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/cardview_dark_background" />
 
-    <TextView
-        android:id="@+id/etUsername"
+    <EditText
+        android:id="@+id/Email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvLogin"
-        android:text="username"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:background="@color/material_dynamic_primary10"
-        android:padding="12sp"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_height="60dp"
+        android:hint="Masukan Email"
+        android:layout_marginTop="200dp"/>
 
-    <TextView
-        android:id="@+id/etPassword"
+    <EditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etUsername"
-        android:text="Password"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:background="@color/material_dynamic_primary10"
+        android:layout_height="60dp"
         android:hint="Password"
-        android:padding="12sp"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginTop="270dp"/>
 
-    <Button
-        android:id="@+id/Submit"
+    <TextView
+        android:id="@+id/lupapassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etPassword"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/black"
-        android:text="SUBMIT" />
+        android:layout_below="@id/password"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:text="Lupa Password ?"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/tvbelumpunyaakun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Belum Punya Akun ?"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/cardview_dark_background"/>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="LOGIN" />
 
 </RelativeLayout>
