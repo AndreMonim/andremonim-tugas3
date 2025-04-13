@@ -8,11 +8,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Latihan_1">
-        <activity
-            android:name=".recyclerview"
+        <activity android:name=".ItemCardActivity"
             android:exported="true" />
         <activity
-            android:name=".dasboard"
+            android:name=".RecyclerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Dashboard"
             android:exported="false" />
         <activity
             android:name=".Register"

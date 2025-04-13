@@ -9,11 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class dasboard : AppCompatActivity() {
+class Dashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_dasboard) // Pastikan nama layout sesuai
+        setContentView(R.layout.activity_dashboard) // Pastikan nama layout sesuai
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -31,9 +31,9 @@ class dasboard : AppCompatActivity() {
         }
 
         loginButton.setOnClickListener {
-            // Buat Intent untuk berpindah ke recyclerview activity
-            val intent = Intent(this, recyclerview::class.java)
+            val intent = Intent(this, RecyclerActivity::class.java)
             startActivity(intent)
         }
+
     }
 }

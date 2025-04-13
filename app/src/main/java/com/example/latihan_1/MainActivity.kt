@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.login.setOnClickListener {
-            startActivity(Intent(this, dasboard::class.java))
+            startActivity(Intent(this, Dashboard::class.java))
         }
 
         binding.tvbelumpunyaakun.setOnClickListener {
