@@ -9,7 +9,7 @@ data class Item(
     val imageDesc: String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readInt(),
+        parcel.readInt() ,
         parcel.readString(),
         parcel.readString() ,
     )
