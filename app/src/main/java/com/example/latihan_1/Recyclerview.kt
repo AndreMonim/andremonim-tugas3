@@ -64,8 +64,9 @@ class RecyclerActivity : AppCompatActivity() {
                 R.drawable.andri,
                 "Nama: Andri Ibo",
                 "Andri Ibo adalah bek tangguh asal Sentani, Papua. Ia dikenal karena permainan bertahan yang disiplin dan menjadi andalan di berbagai klub Liga Indonesia."
+            ),
+
             )
-        )
 
 
         adapter = ItemAdapter(dataList)

@@ -1,118 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/daftar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150sp"
-        android:text="Daftar"
-        android:textColor="@color/cardview_dark_background"
-        android:textSize="38sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/NamaLengkap"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border_button"
-        android:padding="12dp"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="25sp"
-        android:hint="Nama"
-        android:gravity="left|center_vertical"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/daftar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_button"
-        android:padding="12dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="25sp"
-        android:hint="Email"
-        android:gravity="left|center_vertical"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/NamaLengkap"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo2"
+            android:contentDescription="Logo Aplikasi"
+            android:layout_gravity="center" />
 
-    <EditText
-        android:id="@+id/NomorTelepon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_button"
-        android:padding="12dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="25sp"
-        android:hint="Phone"
-        android:gravity="left|center_vertical"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/Email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- Judul -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
 
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_button"
-        android:padding="12dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="25sp"
-        android:hint="Password"
-        android:gravity="left|center_vertical"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/NomorTelepon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- Input Email -->
+        <EditText
+            android:id="@+id/emailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="#000000"
+            android:layout_marginTop="16dp" />
 
-    <EditText
-        android:id="@+id/ConfirmPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_button"
-        android:padding="12dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="25sp"
-        android:hint="Confirm password"
-        android:gravity="left|center_vertical"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/Password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- Input Password -->
+        <EditText
+            android:id="@+id/passwordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:backgroundTint="#000000"
+            android:layout_marginTop="12dp" />
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="116dp"
-        android:backgroundTint="@color/design_default_color_on_primary"
-        android:text="Register"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Konfirmasi Password -->
+        <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan kembali Password"
+            android:inputType="textPassword"
+            android:backgroundTint="#000000"
+            android:layout_marginTop="12dp" />
+
+        <!-- Link Masuk -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sudah memiliki akun?"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/masukLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Masuk"
+                android:textSize="12sp"
+                android:textColor="#2979FF" />
+        </LinearLayout>
+
+        <!-- Tombol Daftar -->
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2979FF"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>

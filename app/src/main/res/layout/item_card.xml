@@ -4,34 +4,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="16dp"
     app:cardCornerRadius="12dp"
-    app:cardElevation="6dp">
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="12dp">
 
+        <!-- Gambar Pemain (lebih besar) -->
         <ImageView
             android:id="@+id/imageSource"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop" />
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Foto pemain" />
 
+        <!-- Spacer antara gambar dan nama -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- Nama Pemain -->
         <TextView
             android:id="@+id/cardnama"
-            android:layout_width="365dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#000000" />
 
+        <!-- Deskripsi Pemain -->
         <TextView
             android:id="@+id/carddesc"
-            android:layout_width="365dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp" />
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            android:textColor="#444444" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

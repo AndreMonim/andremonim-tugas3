@@ -48,5 +48,4 @@
         app:layout_constraintStart_toStartOf="@+id/tugas3"
         app:layout_constraintTop_toBottomOf="@+id/tugas3" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
